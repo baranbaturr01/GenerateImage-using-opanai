@@ -1,5 +1,6 @@
 const express = require("express")
 const path = require('path')
+const cors = require('cors')
 require('dotenv').config()
 
 
@@ -8,6 +9,9 @@ const app = express()
 app.get('/', (req, res, next) => {
     res.json("hello")
 })
+
+// Enable CORS
+app.use(cors())
 // Enable body parser
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
