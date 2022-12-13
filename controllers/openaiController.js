@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
 
     try {
         const response = await openAi.createImage({
-            prompt: 'sahabe walking in the desert',
+            prompt: prompt,
             n: 1,
             size: imageSize
         })
